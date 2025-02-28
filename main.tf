@@ -9,7 +9,7 @@ module "scp" {
   source = "./modules/scp"
   scp_policies = {
     "deny-s3-public" = "Deny S3 Public Access"
-    "restrict-regions" = "Restrict to Specific Regions"
+  #  "restrict-regions" = "Restrict to Specific Regions"
   }
   # target_ids = module.ou_creation[*].id
 }
