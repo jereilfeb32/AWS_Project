@@ -5,10 +5,11 @@ variable "role_name" {
 }
 
 variable "assume_role_policy" {
-  description = "Path to the IAM Assume Role Policy Document"
+  description = "Name of the IAM Assume Role Policy Document"
   type        = string
-  default     = "${path.module}/policies/assume_role_policy.json"
+  default     = "assume_role_policy.json"
 }
+
 
 
 variable "policy_file" {
