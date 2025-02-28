@@ -35,5 +35,5 @@ module "iam_aft_execution" {
 # --- 4. AWS SSO Setup ---
 module "sso_users" {
   source     = "./modules/sso_users"
-  sso_admins = var.sso_admins
+#  sso_admins = var.sso_admins
 }
