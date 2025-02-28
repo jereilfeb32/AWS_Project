@@ -2,6 +2,7 @@
 variable "region" {
   description = "The AWS region to deploy resources in"
   type        = string
+  default = "ap-southeast-1"
 }
 variable "ou_names" {
   description = "List of Organizational Units to create"
