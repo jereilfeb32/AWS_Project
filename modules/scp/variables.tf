@@ -1,5 +1,10 @@
 variable "scp_policies" {
   description = "List of SCP Policies to apply"
+  type        = map(string)
+
+}
+variable "ou_names" {
+  description = "List of Organizational Units to create"
   type        = list(string)
-  default     = ["deny-s3-public", "restrict-regions"]
+  default     = ["AFT-Management", "AFT-Managed-Accounts"]
 }
