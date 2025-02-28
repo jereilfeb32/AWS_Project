@@ -7,17 +7,9 @@ variable "role_name" {
 variable "assume_role_policy" {
   description = "IAM Assume Role Policy Document for AFT Execution Role"
   type        = string
-  default     = jsonencode({
-    Version = "2012-10-17",
-    Statement = [{
-      Effect = "Allow",
-      Principal = {
-        Service = "controltower.amazonaws.com"
-      },
-      Action = "sts:AssumeRole"
-    }]
-  })
+  default     = file("${path.module}/policies/assume_role_policy.json")
 }
+
 
 variable "policy_file" {
   description = "Path to the IAM Policy JSON file"
