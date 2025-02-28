@@ -1,0 +1,38 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Action": [
+          "organizations:Describe*",
+          "organizations:List*",
+          "organizations:CreateAccount",
+          "organizations:MoveAccount",
+          "organizations:UpdateAccount"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "sso:List*",
+          "sso:Describe*",
+          "sso:CreatePermissionSet",
+          "sso:DeletePermissionSet",
+          "sso:AttachManagedPolicyToPermissionSet"
+        ],
+        "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": [
+          "iam:CreateRole",
+          "iam:PutRolePolicy",
+          "iam:AttachRolePolicy",
+          "iam:PassRole"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }
+  
