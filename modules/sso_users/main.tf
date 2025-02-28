@@ -1,3 +1,5 @@
+data "aws_ssoadmin_instances" "main" {}
+
 resource "aws_ssoadmin_permission_set" "admin" {
   for_each      = toset(var.sso_admins)
   name          = "AFT-Admin-${each.key}"
