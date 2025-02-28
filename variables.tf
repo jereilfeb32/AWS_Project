@@ -2,7 +2,6 @@
 variable "region" {
   description = "The AWS region to deploy resources in"
   type        = string
-  default = "ap-southeast-1"
 }
 variable "ou_names" {
   description = "List of Organizational Units to create"
@@ -11,10 +10,10 @@ variable "ou_names" {
 }
 
 variable "scp_policies" {
-  description = "List of SCP Policies to apply"
-  type        = list(string)
-  default     = ["deny-s3-public", "restrict-regions"]
+  description = "Map of SCP Policies to apply"
+  type        = map(string)
 }
+
 
 variable "sso_admins" {
   description = "List of SSO Admin users"
