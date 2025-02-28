@@ -1,8 +1,7 @@
 resource "aws_iam_role" "aft_execution" {
   name               = var.role_name
-  assume_role_policy = var.assume_role_policy != "" ? var.assume_role_policy : file("${path.module}/policies/assume_role_policy.json")
+  assume_role_policy = var.assume_role_policy
 }
-
 
 resource "aws_iam_policy" "aft_policy" {
   name   = "AFT-Policy"

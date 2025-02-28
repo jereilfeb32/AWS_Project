@@ -7,9 +7,8 @@ variable "role_name" {
 variable "assume_role_policy" {
   description = "IAM Assume Role Policy Document for AFT Execution Role"
   type        = string
-  default     = ""
+  default     = file("${path.module}/policies/assume_role_policy.json")
 }
-
 
 
 variable "policy_file" {

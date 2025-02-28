@@ -3,3 +3,6 @@ resource "aws_organizations_organizational_unit" "ou" {
   name      = each.key
   parent_id = aws_organizations_organization.main.id
 }
+resource "aws_organizations_organization" "main" {
+  feature_set = "ALL"
+}
