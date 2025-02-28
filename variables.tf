@@ -13,7 +13,11 @@ variable "ou_names" {
 variable "scp_policies" {
   description = "Map of SCP Policies to apply"
   type        = map(string)
+  default = {
+    "deny-s3-public"   = "Deny S3 Public Access"
+  }
 }
+
 
 
 variable "sso_admins" {
